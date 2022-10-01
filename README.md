@@ -1,24 +1,13 @@
-# README
+# My coding blog
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is my first Rails project for the Odin Project, and will eventually be automatically updated with daily entries from my Journal repo.
 
-Things you may want to cover:
+## Features
 
-* Ruby version
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Features to add
+- Auto-adding blog posts when I add an entry to my Journal
+- Comments
+- Moderation/admin dashboard
+- Tags
+- Dark/light mode
