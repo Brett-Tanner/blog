@@ -1,2 +1,9 @@
-<h1>Article Archive</h1>
-<p>Wait, I'm not an article!</p>
+<h1>Articles</h1>
+
+<ul>
+  <% @articles.each do |article| %>
+    <li>
+      <%= article.title %>
+    </li>
+  <% end %>
+</ul>
