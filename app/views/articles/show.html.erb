@@ -1,0 +1,9 @@
+<h1><%= @article.title %></h1>
+
+<p><%= @article.body %></p>
+
+<% if @article.created_at == @article.updated_at %>
+    <p>Posted at <%= @article.created_at%></p>
+<% else %>
+    <p>Posted at <%= @article.updated_at%></p>
+<% end %>
