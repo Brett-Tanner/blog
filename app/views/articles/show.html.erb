@@ -5,5 +5,13 @@
 <% if @article.created_at == @article.updated_at %>
     <p>Posted at <%= @article.created_at%></p>
 <% else %>
-    <p>Posted at <%= @article.updated_at%></p>
+    <p>Updated at <%= @article.updated_at%></p>
 <% end %>
+
+<ul>
+    <li><%= link_to "Edit", edit_article_path(@article) %></li>
+    <li><%= link_to "Destroy", article_path(@article), data: {
+        turbo_method: :delete,
+        turbo_confirm: "Are you sure?"
+    } %></li>
+</ul>
