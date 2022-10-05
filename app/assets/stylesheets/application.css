@@ -95,10 +95,15 @@ a {
 
 #main_content {
     grid-area: main_content;
+    background-image: url("main_background.jpg");
+    background-origin: border-box;
+    background-position: center;
+    background-size: cover;
 }
 
 #footer {
     grid-area: footer;
     font-size: 10rem;
     justify-content: center;
+    gap: 20rem;
 }

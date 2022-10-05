@@ -10,6 +10,8 @@
     <%= javascript_importmap_tags %>
 
     <%= favicon_link_tag asset_path('site_icon.png') %>
+
+    <%= yield :head %>
   </head>
 
   <body>
@@ -27,6 +29,10 @@
 
     <div id="footer">
       <%= link_to "Writing icons created by Freepik - Flaticon", "https://www.flaticon.com/free-icons/writing" %>
+      <span>
+        <%= link_to "Photo by Annie Spratt", "https://unsplash.com/@anniespratt?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" %>
+        <%= link_to "on Unsplash", "https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" %>
+      </span>
     </div>
   </body>
 </html>
