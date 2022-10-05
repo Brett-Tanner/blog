@@ -23,6 +23,7 @@
     --header-button-accent: rgb(128, 69, 42);
     --header-text-color: antiquewhite;
     --secondary-header-text_color: gray;
+    --article-text-color: black;
 }
 
 body {
@@ -100,6 +101,7 @@ a {
     background-origin: border-box;
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 #footer {
