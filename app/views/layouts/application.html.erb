@@ -8,9 +8,25 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+
+    <%= favicon_link_tag asset_path('site_icon.png') %>
   </head>
 
   <body>
-    <%= yield %>
+    <div id="header">
+      <%= link_to articles_path, id: "home_link" do %>
+        <%= image_tag("site_icon.png") %>
+        Home
+      <% end %>
+      <%= link_to "New article", new_article_path, id: "new_article" %>
+    </div>
+
+    <div id="main_content">
+      <%= yield %>
+    </div>
+
+    <div id="footer">
+      <%= link_to "Writing icons created by Freepik - Flaticon", "https://www.flaticon.com/free-icons/writing" %>
+    </div>
   </body>
 </html>
