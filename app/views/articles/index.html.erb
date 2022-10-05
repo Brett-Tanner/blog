@@ -2,13 +2,17 @@
   <%= stylesheet_link_tag "index" %>
 <% end %>
 
-<h1>Articles</h1>
-
-<ul>
-  <% @articles.each do |article| %>
-    <li>
-        <%= link_to article.title, article %>
-      </a>
-    </li>
+<div id="list_container">
+  <h1>Articles</h1>
+  
+  <% @articles.limit(9).each do |article| %>
+    <div class="articles">
+      <h3><%= article.title %></h3>
+      <p><%= article.body %></p>
+      <%# TODO: Turn into links %>
+      <%= image_tag("edit.svg", id: "edit") %>
+      <%= image_tag("comment.svg", id: "comment") %>
+      <%= image_tag("maximize.svg", id: "maximize") %>      
+    </div>
   <% end %>
-</ul>
+</div>
