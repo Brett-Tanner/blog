@@ -3,31 +3,32 @@
   <%= javascript_include_tag "index", defer: "defer" %>
 <% end %>
 
-<div id="list_container">
+<main>
+
   <h1>Articles</h1>
+
+  <div id="list_container">
+    
+    <% @articles.limit(9).each do |article| %>
+      <div class="articles">
+        <h3><%= article.title %></h3>
+        <p><%= article.body %></p>
+        <%= link_to edit_article_path(article), id: "edit" do %>
+          <%= image_tag("edit.svg") %>
+        <% end %>
+        <%= link_to article_path(article), id: "comment_count", anchor: "comment_commenter" do %>
+        <%# not sure this one correctly links to comment section yet %>
+          <%= article.comments.count %>
+        <% end %>
+        <%= link_to article_path(article), id: "comment", anchor: "comment_commenter" do %>
+        <%# not sure this one correctly links to comment section yet %>
+          <%= image_tag("comment.svg") %>
+        <% end %>
+        <%= link_to article_path(article), id: "maximize" do %>
+          <%= image_tag("maximize.svg") %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
   
-  <% @articles.limit(9).each do |article| %>
-    <div class="articles">
-      <h3><%= article.title %></h3>
-      <p><%= article.body %></p>
-
-      <%= link_to edit_article_path(article), id: "edit" do %>
-        <%= image_tag("edit.svg") %>
-      <% end %>
-
-      <%= link_to article_path(article), id: "comment_count", anchor: "comment_commenter" do %>
-      <%# not sure this one correctly links to comment section yet %>
-        <%= article.comments.count %>
-      <% end %>
-
-      <%= link_to article_path(article), id: "comment", anchor: "comment_commenter" do %>
-      <%# not sure this one correctly links to comment section yet %>
-        <%= image_tag("comment.svg") %>
-      <% end %>
-
-      <%= link_to article_path(article), id: "maximize" do %>
-        <%= image_tag("maximize.svg") %>
-      <% end %>      
-    </div>
-  <% end %>
-</div>
+</main>
