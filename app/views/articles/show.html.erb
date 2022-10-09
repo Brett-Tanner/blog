@@ -1,23 +1,46 @@
-<h1><%= @article.title %></h1>
-
-<p><%= @article.body %></p>
-
-<% if @article.created_at == @article.updated_at %>
-    <p>Posted at <%= @article.created_at%></p>
-<% else %>
-    <p>Updated at <%= @article.updated_at%></p>
+<% content_for :head do %>
+  <%= stylesheet_link_tag "show" %>
 <% end %>
 
-<ul>
-    <li><%= link_to "Edit", edit_article_path(@article) %></li>
-    <li><%= link_to "Destroy", article_path(@article), data: {
+<main>
+    <div id="article">
+        <h1><%= @article.title %></h1>
+        
+        <p id='body'><%= @article.body %></p>
+        
+        <% if @article.created_at == @article.updated_at %>
+            <p id='timestamp'>Posted at <%= @article.created_at%></p>
+        <% else %>
+            <p id='timestamp'>Updated at <%= @article.updated_at%></p>
+        <% end %>
+        
+        <%= link_to edit_article_path(@article), id: "edit" do %>
+          <%= image_tag("edit.svg") %>
+        <% end %>
+
+        <%= link_to article_path(@article), id: "comment_count", anchor: "comment_commenter" do %>
+        <%# not sure this one correctly links to comment section yet %>
+          <%= @article.comments.count %>
+        <% end %>
+
+        <%= link_to article_path(@article), id: "comment", anchor: "comment_commenter" do %>
+        <%# not sure this one correctly links to comment section yet %>
+          <%= image_tag("comment.svg") %>
+        <% end %>
+
+        <%= link_to article_path(@article), id: "delete", data: {
         turbo_method: :delete,
-        turbo_confirm: "Are you sure?"
-    } %></li>
-</ul>
+        turbo_confirm: "Are you sure you want to delete this article?"
+        }  do %>
+            <%= image_tag("delete.svg") %>
+        <% end %>
 
-<h2>Comments</h2>
-<%= render @article.comments %>
+    </div>
 
-<h2>Add a comment!</h2>
-<%= render 'comments/form' %>
+    <h2>Comments</h2>
+    <%= "No comments yet!" if @article.comments.count == 0 %>
+    <%= render @article.comments %>
+    
+    <h2>Add a comment!</h2>
+    <%= render 'comments/form' %>
+</main>

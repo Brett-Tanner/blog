@@ -2,14 +2,6 @@
     --paper-background: url("article_background.jpg");
 }
 
-#main_content {
-    display: grid;
-    grid-template-columns: 10fr 80fr 10fr;
-    grid-template-areas:
-    ". main .";
-    font-size: 20rem;
-}
-
 main {
     grid-area: main;
     background-color: rgba(128, 128, 128, 0.7);
