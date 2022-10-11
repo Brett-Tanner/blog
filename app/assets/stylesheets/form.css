@@ -1,5 +1,14 @@
+main.new,
+main.edit {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
 #comment_commenter,
-#comment_body {
+#comment_body,
+#article_title,
+#article_body {
     border: 2rem solid var(--header-button-accent);
     border-radius: 5rem;
     background-color: var(--header-background);
@@ -10,13 +19,30 @@
 form {
     color: var(--comment-text-color);
     align-self: stretch;
-    font-size: var(--default-text-size);
+    font-size: var(--default-heading-size);
 }
 
 form p {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
+}
+
+main.new form,
+main.edit form {
+    color: antiquewhite;
+}
+
+#article_title {
+    width: 60vw;
+    height: 5vh;
+    font-family: var(--heading-font);
+}
+
+#article_body {
+    width: 60vw;
+    height: 50vh;
+    font-family: var(--body-font);
 }
 
 form p:last-child input {

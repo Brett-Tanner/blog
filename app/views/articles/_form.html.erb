@@ -1,25 +1,25 @@
 <% content_for :head do %>
-  <%= stylesheet_link_tag "comment_form" %>
+  <%= stylesheet_link_tag "form" %>
 <% end %>
 
 <%= form_with model: article do |form| %>
-  <div>
+<p>
     <%= form.label :title %><br>
     <%= form.text_field :title %>
     <% article.errors.full_messages_for(:title).each do |message| %>
       <div><%= message %></div>
     <% end %>
-  </div>
+  </p>
 
-  <div>
+  <p>
     <%= form.label :body %><br>
     <%= form.text_area :body %><br>
     <% article.errors.full_messages_for(:body).each do |message| %>
       <div><%= message %></div>
     <% end %>
-  </div>
+  </p>
 
-  <div>
-    <%= form.submit, id: 'submit_comment' %>
-  </div>
+  <p>
+    <%= form.submit %>
+  </p>
 <% end %>
