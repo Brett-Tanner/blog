@@ -18,12 +18,16 @@
     font-size: 6.25%;
     box-sizing: border-box;
     font-family: roboto, sans-serif;
-    --header-background: rgba(160, 82, 45, 0.8);
-    --header-button: rgb(175, 107, 75);
-    --header-button-accent: rgb(128, 69, 42);
+    --header-background: rgb(217, 119, 6);
+    --header-button: rgb(180, 83, 9);
+    --header-button-accent: rgb(146, 64, 14);
     --header-text-color: antiquewhite;
-    --secondary-header-text_color: gray;
     --article-text-color: black;
+    --comment-text-color: rgb(17, 24, 39);
+    --default-text-size: 2vw;
+    --default-heading-size: 3vw;
+    --body-font: 'Kalam', cursive;
+    --heading-font: 'Amatic SC', cursive;
 }
 
 body {
@@ -80,9 +84,9 @@ a {
 }
 
 #new_article {
-    border: 2rem outset black;
+    border: 2rem outset gray;
     background-color: var(--header-button);
-    border-radius: 8rem;
+    border-radius: 5rem;
     padding: 5rem;
     font-size: 20rem;
 }

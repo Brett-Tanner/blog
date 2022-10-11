@@ -37,10 +37,12 @@
 
     </div>
 
-    <h2>Comments</h2>
-    <%= "No comments yet!" if @article.comments.count == 0 %>
-    <%= render @article.comments %>
-    
-    <h2>Add a comment!</h2>
-    <%= render 'comments/form' %>
+    <div id="comment_section">
+      <h2>Comments</h2>
+      <%= "No comments yet!" if @article.comments.count == 0 %>
+      <%= render @article.comments %>
+      
+      <h2>Add your comment!</h2>
+      <%= render 'comments/form' %>
+    </div>
 </main>

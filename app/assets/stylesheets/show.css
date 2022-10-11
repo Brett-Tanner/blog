@@ -29,11 +29,15 @@ main.show {
     grid-row: 1 / 2;
     grid-column: span 8;
     text-align: center;
+    font-size: var(--default-heading-size);
+    font-family: var(--heading-font);
 }
 
 #body {
     grid-row: 2 / 3;
     grid-column: span 8;
+    font-size: var(--default-text-size);
+    font-family: var(--body-font);
 }
 
 #timestamp,
@@ -71,4 +75,21 @@ main.show {
 #delete {
     grid-row: 3 / 4;
     grid-column: 8 / 9;
+}
+
+#comment_section {
+    color: var(--comment-text-color);
+    align-self: stretch;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+#comment_section h2 {
+    font-size: var(--default-heading-size);
+}
+
+.comment {
+    align-self: flex-start;
+    font-size: 1.5vw;
 }

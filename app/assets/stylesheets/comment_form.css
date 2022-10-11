@@ -1,0 +1,33 @@
+#comment_commenter,
+#comment_body {
+    border: 2rem solid var(--header-button-accent);
+    border-radius: 5rem;
+    background-color: var(--header-background);
+    margin-top: 5rem;
+    font-size: var(--default-text-size);
+}
+
+form {
+    color: var(--comment-text-color);
+    align-self: stretch;
+    font-size: var(--default-text-size);
+}
+
+form p {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+form p:last-child input {
+    background-color: var(--header-button);
+    color: var(--header-text-color);
+    border: 2rem solid var(--header-button-accent);
+    border-radius: 5rem;
+    padding: 5rem;
+    font-size: var(--default-text-size);
+}
+
+form p:last-child input:hover {
+    background-color: var(--header-button-accent);
+}
