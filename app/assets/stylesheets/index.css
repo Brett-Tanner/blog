@@ -54,20 +54,6 @@ main > h1 {
         overflow: scroll;
         font-size: 7rem;
     }
-
-    .articles.active_article > #edit,
-    .articles.active_article > #comment,
-    .articles.active_article > #comment_count, 
-    .articles.active_article > #maximize {
-        align-self: end;
-        font-size: 1vw;
-    }
-
-    .articles.active_article > #edit img,
-    .articles.active_article > #comment img,
-    .articles.active_article > #maximize img {
-        width: 1vw;
-    }
 }
 
 @media (min-width: 750px) and (max-width: 1299px) {
@@ -81,20 +67,6 @@ main > h1 {
         overflow: scroll;
         font-size: 14rem;
     }
-
-    .articles.active_article > #edit,
-    .articles.active_article > #comment,
-    .articles.active_article > #comment_count, 
-    .articles.active_article > #maximize {
-        align-self: end;
-        font-size: 1vw;
-    }
-
-    .articles.active_article > #edit img,
-    .articles.active_article > #comment img,
-    .articles.active_article > #maximize img {
-        width: 1vw;
-    }
 }
 
 .articles > h3 {
@@ -103,6 +75,7 @@ main > h1 {
     grid-row: 1 / 2;
     grid-column: 1 / span 10;
     font-family: var(--heading-font);
+    font-size: var(--default-heading-size);
 }
 
 .articles > p {
@@ -110,6 +83,7 @@ main > h1 {
     grid-column: span 10;
     overflow: hidden;
     font-family: var(--body-font);
+    font-size: var(--default-text-size);
 }
 
 #edit,
@@ -133,7 +107,7 @@ main > h1 {
     grid-column: 6 / 7;
     color: var(--article-text-color);
     padding-top: 22%;
-    font-size: 2.2vw;
+    font-size: 24rem;
     font-family: var(--body-font);
 }
 

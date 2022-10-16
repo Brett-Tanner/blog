@@ -24,8 +24,8 @@
     --header-text-color: antiquewhite;
     --article-text-color: black;
     --comment-text-color: rgb(17, 24, 39);
-    --default-text-size: 2vw;
-    --default-heading-size: 3vw;
+    --default-text-size: max(21rem, 2vw);
+    --default-heading-size: max(30rem, 3vw);
     --body-font: 'Kalam', cursive;
     --heading-font: 'Amatic SC', cursive;
 }
